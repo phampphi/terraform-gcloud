@@ -8,7 +8,7 @@ RUN apk --update add unzip curl && \
     # install mysql-client
     apk add mysql-client && \
     # setup workdir
-    mkdir /src && mkdir -p /src/.config/gcloud/logs && \ 
+    mkdir /src && mkdir -p /.config/gcloud/logs && \ 
     # clean up
     rm -rf /var/cache/apk/* /tmp/*
 
