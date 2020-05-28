@@ -18,7 +18,7 @@ RUN apk --update add --no-cache unzip curl dpkg && \
     gosu nobody true && \
     # setup work dir
     mkdir /home/${user} && chown -R ${user}:${group} /home/${user}/ && \
-    mkdir -p /.config/gcloud && chown -R ${user}:${group} /.config/gcloud/ && \ 
+    mkdir -p /.config/gcloud && chmod 775 -R /.config/gcloud/ && chown -R ${user}:${group} /.config/gcloud/ && \ 
     # clean up
     rm -rf /var/cache/apk/* /tmp/*
 
